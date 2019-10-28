@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+#root {
+  height: 100vh;
+  position: relative;
+  background-image:linear-gradient(-30deg, #e1d9f5, #f3f5e8);
+}
+
+nav ,.controller,.accountopration{
+  height: 55px;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  flex:1 0 auto;
+  border-bottom: 1px solid #f3f5e8;
+}
+
+nav > a,.accountopration>a{
+  text-decoration: none;
+  text-align:center;
+  color:rgb(145, 87, 109);
+}
+
+a.nav-selected{
+  color:rgb(55, 65, 207);
+}
+
+form{
+  position:absolute;
+  top:55;
+  width:100vw;
+  text-align: center;
+  height:3rem;
+  line-height: 3rem;
+}
+form > input{
+  border-radius: 5px;
+  outline: none;
+  height:25px;
+  text-align: center;
+}
+
+.title{
+  text-align: center;
+  margin:10px 0 20px 0;
+  font-size: 1.2rem;
+  line-height: 28px;
+  height: 28px;
+  display: flow-root;
+}
+
+.listbutton{
+  position: absolute;
+  right:20px;
+  top: 67px;
+}
+
+.display,.player{
+  position: absolute;
+  list-style-type: none;
+  padding: 0;
+  width:100vw;
+  display: flow-root;
+  margin:0;
+}
+.display img,.player img{
+  opacity: .9;
+  display: block;
+  margin:0 auto;
+  width:300px;
+  height: 300px;
+  border-radius: 5px;
+}
+.display span,.player span{
+  display: block;
+  text-align: center;
+  margin-top:20px;
+  height: 24px;
+  line-height: 24px;
+}
+.display .opration,.player .opration{
+  color:black;
+  float: right;
+  right: 20px;
+  position:absolute;
+  bottom:-17px
+}
+
+.loadingmusic{
+  text-align: center;
+}
+
+.process{
+  position: relative;
+  width:300px;
+  height: 4px;
+  background-color: rgb(247, 150, 71);
+  margin:12px auto 0;
+  border-radius: 2%/50%;
+  overflow: visible;
+}
+.currenttime{
+  position: relative;
+  width:0%;
+  background-color: rgb(116, 243, 243) ;
+  height: 4px;
+  border-radius: 2%/50%;
+}
+.currenttime .circle{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(59, 163, 163);
+  right: -5px;
+  top:-3px
+}
+.process .digitaltime{
+  position: absolute;
+  font-size: .8rem;
+  width: 300px;
+  text-align: right;
+}
+.accountform{
+  display:flex;
+  flex-flow: column nowrap;
+  align-items:center;
+}
+.accountform .errormessage{
+  width: 100%;
+  height: 48px;
+  text-align: center;
+  font-size: 0.8rem;
+  color:rgb(236, 92, 9)
+}
+.accountform > * {
+  flex : 1 0 auto
+}
+.accountform .accountbutton{
+  background: linear-gradient(-45deg,rgb(173, 194, 196), rgb(190, 192, 211));
+  outline: 0;
+  border:0;
+  border-radius: 5px;
+  width: 90px;
+  height: 30px;
+}
+
+.playlist{
+  padding :0;
+  list-style-type: none;
+}
+.playlist > li{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 40px;
+  margin: 0 auto;
+  align-items: center;
+  justify-items: center;
+}
+.playlist > li > span:first-child{
+  justify-self: right;
+}
+.playlist .playlistopration{
+  display:inline-block;
+}
+.buttongroup{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-items: center;
+}
+.buttongroup button:first-child{
+  justify-self: right
+}
+
+.list{
+  margin-top: 20px;
+  list-style-type: none;
+  padding-left: 0px;
+  height: 70%;
+  width:100vw;
+  overflow: hidden;
+}
+.list img{
+  display: none;
+}
+.list li{
+  border-bottom: 1px dotted rgb(189, 220, 238);
+  margin:0 auto;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+  min-height: 25px;
+}
+
+.list li button{
+  justify-self: center;
+}
+
+.bottom-nav{
+  position: absolute;
+  bottom:0;
+  width:100vw
+}
+.empty{
+  padding-top: 30px;
+  text-align: center;
+  color:rgb(143, 143, 143);
+  font-size:.9rem
+}
